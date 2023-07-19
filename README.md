@@ -19,10 +19,23 @@
 6) Verification of the assembled genome
 7) Annotation of the assembled genome
 
-#### 
-#### 
-### 2. 
+#### Challenges of *de novo* assembly
+#### Sequence assembly is perhaps the application domain of bioinformatics where “skill” and “expertise” are the most difficult to identify and define  
+#### As you will see, it is a field where the procedural method descriptions “this is the command we used to assemble the genome” hide the staggering complexity and challenges of finding the particular command reported to work well  
+#### Assemblers are quite unlike any other software tool you will ever use. Most come with a bewildering array of parameters - the purpose of which are not explained, yet many will have profound effects on the results that they produce  
+
+#### Trial and error are one of the most commonly used strategies - you will have to keep tuning the parameters and rerun the entire process hoping that the results improve - sometimes in vain  
+#### As it turns out, genome assembly is the most computational demanding bioinformatics method of them all  
+#### Assembling a large genome may take even weeks(!) and substantial computational resources  
+#### Thus any expertise built on trial and error will have to be accumulated over a much more extended period  
+#### Finally, even when assembly appears to work, almost always it will contain several severe and substantial errors. That is where, in our opinion, bioinformatics expertise matters more  
+#### The ability to understand, visualize and correct the mistakes of an assembly has a utility that will outlast the present and is more valuable than knowing the exact invocation of a tool by heart  
+
+
 <figure>
-    <img src="variant_calling_steps.png" width="230" height="300">
-    <figcaption>Variant Calling Workflow</figcaption>
+    <img src="denovo_pic1.png" width="300" height="250">
+    <figcaption>Overlapping reads are assembled into contigs. Based on the info about paired-end reads, contigs may be further assembled into scaffolds</figcaption>
 </figure>
+
+
+### 2. 
