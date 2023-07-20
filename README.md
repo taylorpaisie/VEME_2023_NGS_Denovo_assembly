@@ -20,8 +20,7 @@
 7) Annotation of the assembled genome
 
 #### Challenges of *de novo* assembly
-#### Sequence assembly is perhaps the application domain of bioinformatics where “skill” and “expertise” are the most difficult to identify and define  
-#### As you will see, it is a field where the procedural method descriptions “this is the command we used to assemble the genome” hide the staggering complexity and challenges of finding the particular command reported to work well  
+#### Sequence assembly is perhaps the application domain of bioinformatics where skill and expertise are the most difficult to identify and define   
 #### Assemblers are quite unlike any other software tool you will ever use. Most come with a bewildering array of parameters - the purpose of which are not explained, yet many will have profound effects on the results that they produce  
 
 #### Trial and error are one of the most commonly used strategies - you will have to keep tuning the parameters and rerun the entire process hoping that the results improve - sometimes in vain  
@@ -38,4 +37,24 @@
 </figure>
 
 
-### 2. 
+### 2. Trimming Fastq files  
+
+1. Running Trimmomatic on bacteriophage fastq files:  
+
+`$ trimmomatic PE 169_S7_L001_R1_001.fastq.gz  169_S7_L001_R2_001.fastq.gz \  
+169_S7_L001_R1_001.trim.fastq.gz 169_S7_L001_R1_001un.trim.fastq.gz \  
+169_S7_L001_R2_001.trim.fastq.gz 169_S7_L001_R2_001un.trim.fastq.gz \  
+SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:NexteraPE-PE.fa:2:40:15`  
+
+2. Running FastQC on newly trimmed fastq files:  
+
+`$ fastqc *trim.fastq.gz`  
+
+
+### 3. Sequence Assembly
+
+#### We will be using the program [SPades](http://cab.spbu.ru/software/spades/) for *de novo* assembly  
+
+
+
+
