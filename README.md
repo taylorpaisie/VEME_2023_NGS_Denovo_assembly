@@ -154,7 +154,7 @@
 
 <figure>
     <img src="IGV_pic1.png" width="2000" height="400">
-    <figcaption>BLAST results from our scaffolds</figcaption>
+    <figcaption>IGV visualization of our genome assembly</figcaption>
 </figure>
 
 
