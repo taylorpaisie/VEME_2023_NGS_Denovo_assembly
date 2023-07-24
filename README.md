@@ -211,7 +211,7 @@
     * The .faa file contains the protein sequences of the genes annotated  
     * The .ffn file contains the nucleotide sequences of the genes annotated  
 
-#### We will use a protein set specific to Pseudomonas phage CMS1 (NC_031063.1), our closely related genome from BLAST, for the annotation
+#### We will use a protein set specific to Pseudomonas phage PEV2 (NC_031063.1), our closely related genome from BLAST, for the annotation
 
 #### First we want to download the [protein coding regions of the Pseudomonas phage PEV2 (NC_031063.1) genome](https://www.ncbi.nlm.nih.gov/nuccore/NC_031063.1), we can do this from NCBI
 
