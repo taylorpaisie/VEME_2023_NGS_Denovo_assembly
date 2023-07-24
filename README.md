@@ -111,6 +111,14 @@
 
 #### We will know take our scaffolds and use [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) to compare our newly assembled genome to other genomes  
 
+<figure>
+    <img src="blast_results.png" width="500" height="400">
+    <figcaption>BLAST results from our scaffolds</figcaption>
+</figure>
+
+
+
+
 
 ### 5. Filling the gaps  
 
