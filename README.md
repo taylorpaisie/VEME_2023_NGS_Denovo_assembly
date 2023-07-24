@@ -37,25 +37,47 @@
 </figure>
 
 
-### 2. Trimming Fastq files  
-
 #### Multidrug resistant bacteria have become a major public health threat. Phage therapy may to be used as an alternative to antibiotics or, as a supplementary approach to treat some bacterial infections   
 #### Bacteriophages have been applied in clinical practice for the treatment of localized infections in wounds, burns, and trophic ulcers, including diabetic foot ulcers (PMC6083058)  
 #### In this study, bacteria were collected from trophic ulcers of the patients  
-#### For each sample, the unique bacteriophage was selected from bacteriophage cocktails produced by MicroGen (https://www.microgen.ru/en/) or from environmental samples based on its efficiency against the bacteria  
+#### For each sample, the unique bacteriophage was selected from bacteriophage cocktails produced by [MicroGen](https://www.microgen.ru/en/) or from environmental samples based on its efficiency against the bacteria  
 #### Bacteriophages that were successful in treating diabetic foot disease were sequenced using NGS technology   
+#### The sample we will be using is a 2x250 Illumina sequenced bacteriophage  
 #### The goal of this exercise is to assemble the genome of a sequenced bacteriophage  
 
-1. Running Trimmomatic on bacteriophage fastq files:  
+
+### 2. Trimming Fastq files  
+
+
+#### First we will run FastQC on the raw fastq files:  
+
+`$ fastqc *.fastq.gz`
+
+
+#### Now run Trimmomatic on the raw fastq files:  
 
 `$ trimmomatic PE 169_S7_L001_R1_001.fastq.gz  169_S7_L001_R2_001.fastq.gz \`  
 `169_S7_L001_R1_001.trim.fastq.gz 169_S7_L001_R1_001un.trim.fastq.gz \`  
 `169_S7_L001_R2_001.trim.fastq.gz 169_S7_L001_R2_001un.trim.fastq.gz \`  
-`SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:NexteraPE-PE.fa:2:40:15`  
+`SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15`  
 
-2. Running FastQC on newly trimmed fastq files:  
+
+#### Run FastQC on newly trimmed fastq files:  
 
 `$ fastqc *trim.fastq.gz`  
+
+<figure>
+    <img src="169_1_fastqc.png" width="500" height="400">
+    <figcaption>FastQC graph output for trimmed forward reads</figcaption>
+</figure>
+
+
+
+<figure>
+    <img src="169_2_fastqc.png" width="500" height="400">
+    <figcaption>FastQC graph output for trimmed reverse reads</figcaption>
+</figure>
+
 
 
 ### 3. Sequence Assembly
@@ -63,6 +85,9 @@
 #### We will be using the program [SPades](http://cab.spbu.ru/software/spades/) for *de novo* assembly  
 
 #### Spades will automatically make the final scaffolds
+
+`$ spades.py -k 21,33,55,77,99,127 --careful -1 169_S7_L001_R1_001.trim.fastq.gz \`  
+`-2 169_S7_L001_R2_001.trim.fastq.gz -o spades_output`   
 
 
 
