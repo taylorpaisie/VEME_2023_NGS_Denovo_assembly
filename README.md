@@ -16,8 +16,8 @@
 3. Joining contigs into scaffolds
 4. Comparison with other known genomes
 5. Filling the gaps
-6. Verification of the assembled genome
-7. Annotation of the assembled genome
+6. Annotation of the assembled genome
+7. Visualize genome annotation  
 
 #### Challenges of *de novo* assembly
 #### Sequence assembly is perhaps the application domain of bioinformatics where skill and expertise are the most difficult to identify and define   
@@ -115,8 +115,7 @@
 </figure>
 
 #### BLAST found similar genomes  
-#### The closest is Pseudomonas phage CMS1, complete genome (OM937766.1), with coverage of 99% and identity of 98.53%  
-#### OM937766 has three matches for the contig sequence, all are plus/plus strand  
+#### The closest is Pseudomonas phage CMS1, complete genome (OM937766.1), with coverage of 99% and identity of 98.53%   
 #### Examination of the GenBank record for OM937766 finds that organism is "Pseudomonas phage CMS1" and the taxon ID is 2926659  
 #### Another closely related genome is RefSeq NC_031063.1, Pseudomonas phage PEV2  
 
@@ -230,6 +229,10 @@
 </figure>
 
 
+#### Some tips for using Artemis:
 
+1. There are 3 panels: feature map (top), sequence (middle), feature list (bottom)
+2. Click right-mouse-button on bottom panel and select Show products
+3. Zooming is done via the verrtical scroll bars in the two top panels
 
 
