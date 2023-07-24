@@ -8,10 +8,10 @@
 #### Assembly is a “catch-all” term used to describe methods where we combine shorter individual measurements called reads into longer contiguous sequences typically called contigs
 #### Because the sequencing process works by breaking the original DNA into smaller fragments, the assembly process is conceptually similar to putting together an image puzzle from its many pieces
 #### The software that performs the assembly is called the assembler.
-#### We will learn how to *de novo* assemble reads obtained with the Illumina sequencing platform using [SPAdes](http://cab.spbu.ru/software/spades/., an assembly toolkit containing various assembly pipelines
+#### We will learn how to *de novo* assemble reads obtained with the Illumina sequencing platform using [SPAdes](http://cab.spbu.ru/software/spades/), an assembly toolkit containing various assembly pipelines
 
 #### *De novo* assembly usually includes the following steps:  
-1. Improving of the reads quality (remove adapters, trim reads, etc..
+1. Improving of the reads quality (remove adapters, trim reads, etc..)  
 2. De novo assembly of the overlapping reads into contigs
 3. Joining contigs into scaffolds
 4. Comparison with other known genomes
@@ -40,7 +40,6 @@
 #### Multidrug resistant bacteria have become a major public health threat. Phage therapy may to be used as an alternative to antibiotics or, as a supplementary approach to treat some bacterial infections   
 #### Bacteriophages have been applied in clinical practice for the treatment of localized infections in wounds, burns, and trophic ulcers, including diabetic foot ulcers (PMC6083058)  
 #### In this study, bacteria were collected from trophic ulcers of the patients  
-#### For each sample, the unique bacteriophage was selected from bacteriophage cocktails produced by [MicroGen](https://www.microgen.ru/en/) or from environmental samples based on its efficiency against the bacteria  
 #### Bacteriophages that were successful in treating diabetic foot disease were sequenced using NGS technology   
 #### The sample we will be using is a 2x250 Illumina sequenced bacteriophage  
 #### The goal of this exercise is to assemble the genome of a sequenced bacteriophage  
@@ -170,7 +169,7 @@
 #### We want to "replace all" `_pilon` with nothing
 
 <figure>
-    <img src="editing_fasta.png" width="900" height="500">
+    <img src="editing_fasta.png" width="900" height="700">
     <figcaption>How to edit the improved fasta file</figcaption>
 </figure>
 
