@@ -84,10 +84,26 @@
 
 #### We will be using the program [SPades](http://cab.spbu.ru/software/spades/) for *de novo* assembly  
 
-#### Spades will automatically make the final scaffolds
+#### Spades will automatically make the final scaffolds:  
 
-`$ spades.py -k 21,33,55,77,99,127 --careful -1 169_S7_L001_R1_001.trim.fastq.gz \`  
+`$ spades.py -k 21,33,55,77,99,127 --isolate -1 169_S7_L001_R1_001.trim.fastq.gz \`  
 `-2 169_S7_L001_R2_001.trim.fastq.gz -o spades_output`   
+
+`ls -l spades_output`  
+
+#### Notice in our `spades_output` directory we have both a `contigs.fasta` and a `scaffolds.fasta`  
+
+#### SPades makes both files, but we will be using the `scaffolds.fasta` for this exercise
+
+
+#### Create and move scaffolds from SPades to results directory:  
+
+`$ mkdir -p results/scaffolds`  
+`$ mv spades_output/scaffolds.fasta ../../results/scaffolds`  
+`$ cd ../..`  
+
+#### We now want to be at the `denovo_assembly` directory
+
 
 
 
