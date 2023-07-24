@@ -32,7 +32,7 @@
 
 
 <figure>
-    <img src="denovo_pic1.png" width="300" height="250">
+    <img src="denovo_pic1.png" width="500" height="400">
     <figcaption>Overlapping reads are assembled into contigs. Based on the info about paired-end reads, contigs may be further assembled into scaffolds</figcaption>
 </figure>
 
@@ -115,6 +115,13 @@
     <img src="blast_results.png" width="500" height="400">
     <figcaption>BLAST results from our scaffolds</figcaption>
 </figure>
+
+#### BLAST found similar genomes  
+#### The closest is Pseudomonas phage CMS1, complete genome (OM937766.1), with coverage of 99% and identity of 98.53%  
+#### OM937766 has three matches for the contig sequence, all are plus/plus strand  
+#### Examination of the GenBank record for OM937766 finds that organism is "PPseudomonas phage CMS1" and the taxon ID is 2926659  
+#### Another closely related genome is RefSeq NC_031063.1, Pseudomonas phage PEV2  
+
 
 
 
