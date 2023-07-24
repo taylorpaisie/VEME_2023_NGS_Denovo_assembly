@@ -25,7 +25,7 @@
 
 #### Trial and error are one of the most commonly used strategies - you will have to keep tuning the parameters and rerun the entire process hoping that the results improve - sometimes in vain  
 #### As it turns out, genome assembly is the most computational demanding bioinformatics method of them all  
-#### Assembling a large genome may take even weeks(!. and substantial computational resources  
+#### Assembling a large genome may take weeks and substantial computational resources  
 #### Thus any expertise built on trial and error will have to be accumulated over a much more extended period  
 #### Finally, even when assembly appears to work, almost always it will contain several severe and substantial errors. That is where, in our opinion, bioinformatics expertise matters more  
 #### The ability to understand, visualize and correct the mistakes of an assembly has a utility that will outlast the present and is more valuable than knowing the exact invocation of a tool by heart  
@@ -105,8 +105,6 @@
 #### We now want to be at the `denovo_assembly` directory
 
 
-
-
 ### 4. Comparing the scaffolds to other known genomes
 
 #### We will know take our scaffolds and use [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) to compare our newly assembled genome to other genomes  
@@ -149,18 +147,69 @@
 #### Sort BAM file by coordinates:  
 `$ samtools sort -o results/bam/169.aligned.sorted.bam results/bam/169.aligned.bam`  
 
-#### Index new sorted BAMf file:  
+#### Index new sorted BAM file:  
 `$ samtools index results/bam/169.aligned.sorted.bam`  
 
+#### Now we run the program [Pilon](https://github.com/broadinstitute/pilon)
+
+#### Pilon is a software tool which can be used to automatically improve draft assemblies  
+#### It attempts to make improvements to the input genome, including:  
+    * Single base differences  
+    * Small Indels  
+    * Larger Indels or block substitution events  
+    * Gap filling
+    * Identification of local misassemblies, including optional opening of new gaps
+
+#### Pilon outputs a FASTA file containing an improved representation of the genome from the read data  
+
+`$ pilon --genome scaffolds/scaffolds.fasta --frags bam/169.aligned.sorted.bam --output 169_improved`  
+
+#### This command will give us the file `169_improved.fasta`  
 
 
 
 
+### 6. Annotation of the assembled genome
 
-### 6. Verification of the assembled genome  
+#### We will use [PROKKA](https://github.com/tseemann/prokka) on the improved sequence assembly
+
+#### After you have *de novo* assembled your genome sequencing reads into scaffolds, it is useful to know what genomic features are on those contigs  
+#### The process of identifying and labelling those features is called genome annotation  
+#### Prokka is a "wrapper"; it collects together several pieces of software (from various authors), and so avoids "re-inventing the wheel"  
+#### Prokka finds and annotates features (both protein coding regions and RNA genes, i.e. tRNA, rRNA) present on on a sequence  
+#### Prokka uses a two-step process for the annotation of protein coding regions:  
+    1. Protein coding regions on the genome are identified using Prodigal  
+    2. The function of the encoded protein is predicted by similarity to proteins in one of many protein or protein domain databases  
+#### Prokka is a software tool that can be used to annotate bacterial, archaeal and viral genomes quickly, generating standard output files in GenBank, EMBL and gff formats
+
+#### Once Prokka has finished, examine each of its output files:
+    * The GFF and GBK files contain all of the information about the features annotated (in different formats)  
+    * The .txt file contains a summary of the number of features annotated  
+    * The .faa file contains the protein sequences of the genes annotated  
+    * The .ffn file contains the nucleotide sequences of the genes annotated  
+
+#### We will use a protein set specific to Pseudomonas phage CMS1 (OM937766.1), our closely related genome from BLAST, for the annotation
+
+#### First we want to download the [protein coding regions of the Pseudomonas phage CMS1 (OM937766.1) genome](https://www.ncbi.nlm.nih.gov/nuccore/OM937766.1), we can do this from NCBI
+
+<figure>
+    <img src="download_proteins.png" width="500" height="400">
+    <figcaption>How to download a set of proteins from NCBI</figcaption>
+</figure>
+
+#### Running prokka on the improved alignment with our downloaded protein set for annotation:  
+
+`$ prokka --outdir prokka_output --kingdom Virus \`  
+`--proteins OM937766.1.faa 169_improved.fasta`  
 
 
-### 7. Annotation of the assembled genome
+### 7. Visualize genome annotation
+
+#### We will use the program Artemis to visualize the genome annotation we made with PROKKA
+
+
+
+
 
 
 
