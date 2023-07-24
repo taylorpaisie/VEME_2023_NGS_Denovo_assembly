@@ -6,7 +6,7 @@
 #### Directory visualization
 <figure>
     <img src="denovo_assembly_Graph.svg" width="400" height="300">
-    <figcaption>BLAST results from our scaffolds</figcaption>
+    <figcaption>How the structure of our directories should look</figcaption>
 </figure>
 
 ### 1. Introduction to sequence assembly
