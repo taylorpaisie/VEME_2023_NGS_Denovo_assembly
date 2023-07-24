@@ -147,6 +147,17 @@
 #### Index new sorted BAM file:  
 `$ samtools index results/bam/169.aligned.sorted.bam`  
 
+
+#### Visualizing our new BAM file with IGV
+#### We will use our `scaffolds.fasta` as the reference genome in IGV and the `169.aligned.sorted.bam` BAM file
+
+
+<figure>
+    <img src="IGV_pic1.png" width="2000" height="400">
+    <figcaption>BLAST results from our scaffolds</figcaption>
+</figure>
+
+
 #### Now we run the program [Pilon](https://github.com/broadinstitute/pilon)
 
 #### Pilon is a software tool which can be used to automatically improve draft assemblies  
