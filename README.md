@@ -119,15 +119,42 @@
 #### BLAST found similar genomes  
 #### The closest is Pseudomonas phage CMS1, complete genome (OM937766.1), with coverage of 99% and identity of 98.53%  
 #### OM937766 has three matches for the contig sequence, all are plus/plus strand  
-#### Examination of the GenBank record for OM937766 finds that organism is "PPseudomonas phage CMS1" and the taxon ID is 2926659  
+#### Examination of the GenBank record for OM937766 finds that organism is "Pseudomonas phage CMS1" and the taxon ID is 2926659  
 #### Another closely related genome is RefSeq NC_031063.1, Pseudomonas phage PEV2  
 
 
 
 
-
-
 ### 5. Filling the gaps  
+
+
+#### Now we will take our scaffolds and use it as a reference as a 
+#### Map the reads back to the scaffold as reference  
+#### Set up BWA reference mapping with the scaffold `scaffold.fasta` as reference and add the trimmed fastq files  
+
+#### Index our `scaffold.fasta` file we made with SPades:  
+
+`$ bwa index scaffold.fasta`  
+
+#### Run BWA-MEM reference mapping with the indexed `scaffold.fasta` as the reference and the original trimmed fastq files as the reads:  
+`$ bwa mem results/scaffolds/scaffolds.fasta \`  
+`data/trimmed_fastq/169_S7_L001_R1_001.trim.fastq.gz \`   
+`data/trimmed_fastq/169_S7_L001_R2_001.trim.fastq.gz > results/sam/169.aligned.sam`    
+
+
+#### Convert SAM file to BAM format:  
+`$ samtools view -S -b results/sam/169.aligned.sam > results/bam/169.aligned.bam`  
+
+
+#### Sort BAM file by coordinates:  
+`$ samtools sort -o results/bam/169.aligned.sorted.bam results/bam/169.aligned.bam`  
+
+#### Index new sorted BAMf file:  
+`$ samtools index results/bam/169.aligned.sorted.bam`  
+
+
+
+
 
 
 ### 6. Verification of the assembled genome  
