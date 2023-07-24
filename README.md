@@ -122,7 +122,6 @@
 
 
 
-
 ### 5. Filling the gaps  
 
 
@@ -166,6 +165,15 @@
 
 #### This command will give us the file `169_improved.fasta`  
 
+#### After running this commmand, each fasta input in `169_improved.fasta` has `_pilon`
+#### We want to remove this `_pilon` after each fasta input
+#### Open `169_improved.fasta` in a text editor
+#### We want to "replace all" `_pilon` with nothing
+
+<figure>
+    <img src="editing_fasta.png" width="900" height="500">
+    <figcaption>How to edit the improved fasta file</figcaption>
+</figure>
 
 
 
@@ -193,23 +201,33 @@
 #### First we want to download the [protein coding regions of the Pseudomonas phage CMS1 (OM937766.1) genome](https://www.ncbi.nlm.nih.gov/nuccore/OM937766.1), we can do this from NCBI
 
 <figure>
-    <img src="download_proteins.png" width="500" height="400">
+    <img src="download_proteins.png" width="900" height="500">
     <figcaption>How to download a set of proteins from NCBI</figcaption>
 </figure>
 
 #### Running prokka on the improved alignment with our downloaded protein set for annotation:  
 
-`$ prokka --outdir prokka_output --kingdom Virus \`  
-`--proteins OM937766.1.faa 169_improved.fasta`  
+`$ cd results/`  
+
+`$ prokka --outdir prokka_output --kingdom Viruses \`  
+`--proteins annotation/NC_031063.1.faa 169_improved.fasta`  
 
 
 ### 7. Visualize genome annotation
 
-#### We will use the program Artemis to visualize the genome annotation we made with PROKKA
+#### We will use the program Artemis to visualize the genome annotation we made with PROKKA using [Artemis](https://sanger-pathogens.github.io/Artemis/Artemis/) 
+#### Artemis is a free genome browser and annotation tool that allows visualisation of sequence features, next generation data and the results of analyses within the context of the sequence, and also its six-frame translation  
+#### Artemis is written in Java, and is available for UNIX, Macintosh and Windows systems  
+#### It can read EMBL and GENBANK database entries or sequence in FASTA, indexed FASTA or raw format  
+#### Using the GFF file made from PROKKA, we will open it with Artemis:  
+
+`$  art prokka_output/PROKKA_07242023.gff`  
 
 
-
-
+<figure>
+    <img src="artemis_output.png" width="1000" height="500">
+    <figcaption>Visualizaing the genome annotation with Artemis</figcaption>
+</figure>
 
 
 
