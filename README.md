@@ -3,6 +3,12 @@
 ## Taylor K. Paisie
 ### `https://taylorpaisie.github.io/VEME_2023_NGS_Denovo_assembly/`
 
+#### Directory visualization
+<figure>
+    <img src="denovo_assembly_Graph.svg" width="400" height="300">
+    <figcaption>BLAST results from our scaffolds</figcaption>
+</figure>
+
 ### 1. Introduction to sequence assembly
 #### What does "sequence assembly" mean?
 #### Assembly is a “catch-all” term used to describe methods where we combine shorter individual measurements called reads into longer contiguous sequences typically called contigs
