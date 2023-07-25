@@ -34,6 +34,7 @@
 #### Thus any expertise built on trial and error will have to be accumulated over a much more extended period  
 #### Finally, even when assembly appears to work, almost always it will contain several severe and substantial errors. That is where, in our opinion, bioinformatics expertise matters more  
 #### The ability to understand, visualize and correct the mistakes of an assembly has a utility that will outlast the present and is more valuable than knowing the exact invocation of a tool by heart  
+#### N50: length for which the collection of all contigs of that length or longer covers at least 50% of assembly length  
 
 
 <figure>
