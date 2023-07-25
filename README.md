@@ -186,7 +186,7 @@
 #### We want to "replace all" `_pilon` with nothing
 
 <figure>
-    <img src="editing_fasta.png" width="900" height="700">
+    <img src="editing_fasta.png" width="800" height="700">
     <figcaption>How to edit the improved fasta file</figcaption>
 </figure>
 
