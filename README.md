@@ -91,7 +91,7 @@
 
 #### Spades will automatically make the final scaffolds:  
 
-`$ spades.py -k 21,33,55,77,99,127 --isolate -1 169_S7_L001_R1_001.trim.fastq.gz \`  
+`$ spades.py -k 21,33,55,77,99,127 --careful -1 169_S7_L001_R1_001.trim.fastq.gz \`  
 `-2 169_S7_L001_R2_001.trim.fastq.gz -o spades_output`   
 
 `ls -l spades_output`  
