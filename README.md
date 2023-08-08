@@ -50,22 +50,33 @@
 #### The sample we will be using is a 2x250 Illumina sequenced bacteriophage  
 #### The goal of this exercise is to assemble the genome of a sequenced bacteriophage  
 
+#### Making directories for lesson:
+
+`$ mkdir -p denovo_assembly/data/untrimmed_fastq`   
+`$ mkdir -p denovo_assembly/data/trimmed_fastq`   
+
 
 ### 2. Trimming Fastq files  
 
+#### Copy the fastq and apadter files in the untrimmed fastq directory:  
+`$ cp -i /usr/local/share/data/denovo_assembly/data/untrimmed_fastq/169_S7_L001_R* .`  
+`$ cp -i /usr/local/share/data/denovo_assembly/data/untrimmed_fastq/TruSeq3-PE-2.fa .`  
 
-#### First we will run FastQC on the raw fastq files:  
 
+#### Running FastQC on the raw fastq files:  
+
+`$ cd denovo_assembly/data/untrimmed_fastq`  
 `$ fastqc *.fastq.gz`
 
 
 #### Now run Trimmomatic on the raw fastq files:  
 
-`$ trimmomatic PE 169_S7_L001_R1_001.fastq.gz  169_S7_L001_R2_001.fastq.gz \`  
-`169_S7_L001_R1_001.trim.fastq.gz 169_S7_L001_R1_001un.trim.fastq.gz \`  
-`169_S7_L001_R2_001.trim.fastq.gz 169_S7_L001_R2_001un.trim.fastq.gz \`  
-`SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15`  
-
+```
+$ java -jar /usr/local/share/Trimmomatic-main/dist/jar/trimmomatic-0.40-rc1.jar PE 169_S7_L001_R1_001.fastq.gz  169_S7_L001_R2_001.fastq.gz 
+169_S7_L001_R1_001.trim.fastq.gz 169_S7_L001_R1_001un.trim.fastq.gz
+169_S7_L001_R2_001.trim.fastq.gz 169_S7_L001_R2_001un.trim.fastq.gz
+SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
+```
 
 #### Run FastQC on newly trimmed fastq files:  
 
