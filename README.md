@@ -146,18 +146,18 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 
 #### Now we will take our scaffolds and use it as a reference as a 
 #### Map the reads back to the scaffold as reference  
-#### Set up BWA reference mapping with the scaffold `scaffold.fasta` as reference and add the trimmed fastq files  
+#### Set up BWA reference mapping with the scaffold `scaffolds.fasta` as reference and add the trimmed fastq files  
 
 #### Make sure you are in the `denovo_assembly` directory and make `results` directories (helps with file organization, super important!!)
 
-`$ cd ~/denovo_assembly`
+`$ cd ~/denovo_assembly`  
 `$ mkdir -p results/sam results/bam`  
 
-#### Index our `scaffold.fasta` file we made with SPades:  
+#### Index our `scaffolds.fasta` file we made with SPades:  
 
-`$ bwa index scaffold.fasta`  
+`$ bwa index scaffolds/scaffolds.fasta`  
 
-#### Run BWA-MEM reference mapping with the indexed `scaffold.fasta` as the reference and the original trimmed fastq files as the reads:  
+#### Run BWA-MEM reference mapping with the indexed `scaffolds.fasta` as the reference and the original trimmed fastq files as the reads:  
 `$ bwa mem results/scaffolds/scaffolds.fasta \`  
 `data/trimmed_fastq/169_S7_L001_R1_001.trim.fastq.gz \`   
 `data/trimmed_fastq/169_S7_L001_R2_001.trim.fastq.gz > results/sam/169.aligned.sam`    
@@ -196,7 +196,7 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 
 #### Pilon outputs a FASTA file containing an improved representation of the genome from the read data  
 
-`$ pilon --genome scaffolds/scaffolds.fasta --frags bam/169.aligned.sorted.bam --output 169_improved`  
+`$ pilon --genome results/scaffolds/scaffolds.fasta --frags results/bam/169.aligned.sorted.bam --output results/scaffolds/169_improved`  
 
 #### This command will give us the file `169_improved.fasta`  
 
