@@ -233,7 +233,7 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 
 #### We will use a protein set specific to Pseudomonas phage PEV2 (NC_031063.1), our closely related genome from BLAST, for the annotation
 
-#### First we want to download the [protein coding regions of the Pseudomonas phage PEV2 (NC_031063.1) genome](https://www.ncbi.nlm.nih.gov/nuccore/NC_031063.1), we can do this from NCBI
+#### First we want to download the [protein coding regions of the Pseudomonas phage PEV2 (NC_031063.1) genome](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=Pseudomonas%20phage%20PEV2,%20taxid:1837850), we can do this from NCBI
 
 <figure>
     <img src="download_proteins.png" width="900" height="500">
@@ -242,10 +242,10 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 
 #### Running prokka on the improved alignment with our downloaded protein set for annotation:  
 
-`$ cd results/`  
+`$ mkdir results/annotation`  
 
-`$ prokka --outdir prokka_output --kingdom Viruses \`  
-`--proteins annotation/NC_031063.1.faa 169_improved.fasta`  
+`$ prokka --outdir results/annotation/prokka_output --kingdom Viruses \`    
+`--proteins results/annotation/NC_031063.1.faa results/scaffolds/169_improved.fasta`  
 
 
 ### 7. Visualize genome annotation
