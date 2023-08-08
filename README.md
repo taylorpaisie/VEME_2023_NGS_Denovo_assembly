@@ -242,7 +242,7 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 
 #### Running prokka on the improved alignment with our downloaded protein set for annotation:  
 
-`$ mkdir results/annotation`  
+`$ mkdir -p results/annotation`  
 
 `$ prokka --outdir results/annotation/prokka_output --kingdom Viruses \`    
 `--proteins results/annotation/NC_031063.1.faa results/scaffolds/169_improved.fasta`  
