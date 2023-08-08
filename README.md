@@ -148,6 +148,11 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 #### Map the reads back to the scaffold as reference  
 #### Set up BWA reference mapping with the scaffold `scaffold.fasta` as reference and add the trimmed fastq files  
 
+#### Make sure you are in the `denovo_assembly` directory and make `results` directories (helps with file organization, super important!!)
+
+`$ cd ~/denovo_assembly`
+`$ mkdir -p results/sam results/bam`  
+
 #### Index our `scaffold.fasta` file we made with SPades:  
 
 `$ bwa index scaffold.fasta`  
