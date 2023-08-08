@@ -245,7 +245,11 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 `$ mkdir -p results/annotation`  
 `$ mv ~/Downloads/sequence.fasta results/annotation/NC_031063.1.faa`  
 
-`$ prokka --outdir results/annotation/prokka_output --kingdom Viruses \`    
+#### Need to activate the Prokka conda environment (we can talk about this later if we have time):  
+
+`$ conda activate Prokka`  
+
+`$ /usr/local/share/prokka/bin/prokka --outdir results/annotation/prokka_output --kingdom Viruses \`    
 `--proteins results/annotation/NC_031063.1.faa results/scaffolds/169_improved.fasta`  
 
 
