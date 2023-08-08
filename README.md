@@ -94,6 +94,10 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
     <figcaption>FastQC graph output for trimmed reverse reads</figcaption>
 </figure>
 
+#### Moved trimmed fastq files to the trimmed fastq directory:  
+`$ mv *trim* ../trimmed_fastq`  
+`$ cd ../trimmed_fastq`  
+
 
 
 ### 3. Sequence Assembly
@@ -114,8 +118,8 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 
 #### Create and move scaffolds from SPades to results directory:  
 
-`$ mkdir -p results/scaffolds`  
-`$ mv spades_output/scaffolds.fasta ../../results/scaffolds`  
+`$ mkdir -p ~/denovo_assembly/results/scaffolds`  
+`$ mv ~/denovo_assembly/data/trimmed_fastq/spades_output/scaffolds.fasta ../../results/scaffolds`  
 `$ cd ../..`  
 
 #### We now want to be at the `denovo_assembly` directory
