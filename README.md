@@ -188,11 +188,11 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 
 #### Pilon is a software tool which can be used to automatically improve draft assemblies  
 #### It attempts to make improvements to the input genome, including:  
-    * Single base differences  
-    * Small Indels  
-    * Larger Indels or block substitution events  
-    * Gap filling
-    * Identification of local misassemblies, including optional opening of new gaps
+   * Single base differences  
+   * Small Indels  
+   * Larger Indels or block substitution events  
+   * Gap filling
+   * Identification of local misassemblies, including optional opening of new gaps
 
 #### Pilon outputs a FASTA file containing an improved representation of the genome from the read data  
 
@@ -221,15 +221,15 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 #### Prokka is a "wrapper"; it collects together several pieces of software (from various authors), and so avoids "re-inventing the wheel"  
 #### Prokka finds and annotates features (both protein coding regions and RNA genes, i.e. tRNA, rRNA) present on on a sequence  
 #### Prokka uses a two-step process for the annotation of protein coding regions:  
-    1. Protein coding regions on the genome are identified using Prodigal  
-    2. The function of the encoded protein is predicted by similarity to proteins in one of many protein or protein domain databases  
+   1. Protein coding regions on the genome are identified using Prodigal  
+   2. The function of the encoded protein is predicted by similarity to proteins in one of many protein or protein domain databases  
 #### Prokka is a software tool that can be used to annotate bacterial, archaeal and viral genomes quickly, generating standard output files in GenBank, EMBL and gff formats
 
 #### Once Prokka has finished, examine each of its output files:
-    * The GFF and GBK files contain all of the information about the features annotated (in different formats)  
-    * The .txt file contains a summary of the number of features annotated  
-    * The .faa file contains the protein sequences of the genes annotated  
-    * The .ffn file contains the nucleotide sequences of the genes annotated  
+   * The GFF and GBK files contain all of the information about the features annotated (in different formats)  
+   * The .txt file contains a summary of the number of features annotated  
+   * The .faa file contains the protein sequences of the genes annotated  
+   * The .ffn file contains the nucleotide sequences of the genes annotated  
 
 #### We will use a protein set specific to Pseudomonas phage PEV2 (NC_031063.1), our closely related genome from BLAST, for the annotation
 
