@@ -58,7 +58,7 @@
 
 ### 2. Trimming Fastq files  
 
-#### Copy the fastq and apadter files in the untrimmed fastq directory:  
+#### Copy the fastq and adapter files in the untrimmed fastq directory:  
 `$ cp -i /usr/local/share/data/denovo_assembly/data/untrimmed_fastq/169_S7_L001_R* .`  
 `$ cp -i /usr/local/share/data/denovo_assembly/data/untrimmed_fastq/TruSeq3-PE-2.fa .`  
 
@@ -66,7 +66,7 @@
 #### Running FastQC on the raw fastq files:  
 
 `$ cd denovo_assembly/data/untrimmed_fastq`  
-`$ fastqc *.fastq.gz`
+`$ fastqc *.fastq.gz`  
 
 
 #### Now run Trimmomatic on the raw fastq files:  
@@ -155,7 +155,7 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 
 #### Index our `scaffolds.fasta` file we made with SPades:  
 
-`$ bwa index scaffolds/scaffolds.fasta`  
+`$ bwa index results/scaffolds/scaffolds.fasta`  
 
 #### Run BWA-MEM reference mapping with the indexed `scaffolds.fasta` as the reference and the original trimmed fastq files as the reads:  
 `$ bwa mem results/scaffolds/scaffolds.fasta \`  
