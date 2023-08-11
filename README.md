@@ -249,8 +249,7 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 
 `$ conda activate Prokka`  
 
-`$ /usr/local/share/prokka/bin/prokka --outdir results/annotation/prokka_output --kingdom Viruses \`    
-`--proteins results/annotation/NC_031063.1.faa results/scaffolds/169_improved.fasta`  
+`$ /usr/local/share/prokka/bin/prokka --outdir results/annotation/prokka_output --kingdom Viruses --proteins results/annotation/NC_031063.1.faa results/scaffolds/169_improved.fasta`  
 
 
 ### 7. Visualize genome annotation
