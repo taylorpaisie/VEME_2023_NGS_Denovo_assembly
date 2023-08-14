@@ -115,12 +115,28 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 
 
 #### Use Quast to analyze the SPades output scaffolds fasta file:
-`$ quast.py spades_output/scaffolds.fasta`  
+`$ quast.py -o quast_output spades_output/scaffolds.fasta`  
 
 <figure>
     <img src="quast_result.png" width="700" height="400">
     <figcaption>Result from running Quast on our scaffolds</figcaption>
 </figure>
+
+#### QUAST output contains:  
+   * report.txt	- assessment summary in plain text format  
+   * report.tsv	- tab-separated version of the summary, suitable for spreadsheets (Google Docs, Excel, etc)  
+   * report.tex	- LaTeX version of the summary  
+   * icarus.html - Icarus main menu with links to interactive viewers. See section 3.4 for details  
+   * report.pdf - all other plots combined with all tables (file is created if matplotlib python library is installed)  
+   * report.html - HTML version of the report with interactive plots inside  
+   * contigs_reports/ - (only if a reference genome is provided)
+   * misassemblies_report - detailed report on misassemblies  
+   * unaligned_report - detailed report on unaligned and partially unaligned contigs  
+   * k_mer_stats/ - (only if --k-mer-stats option is specified)
+   * kmers_report - detailed report on k-mer-based metrics  
+   * reads_stats/ - (only if reads are provided)  
+   * reads_report - detailed report on mapped reads statistics  
+
 
 
 #### SPades makes both files, but we will be using the `scaffolds.fasta` for this exercise
