@@ -113,6 +113,16 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 
 #### Notice in our `spades_output` directory we have both a `contigs.fasta` and a `scaffolds.fasta`  
 
+
+#### Use Quast to analyze the SPades output scaffolds fasta file:
+`$ quast.py spades_output/scaffolds.fasta`  
+
+<figure>
+    <img src="quast_result.png" width="700" height="400">
+    <figcaption>Result from running Quast on our scaffolds</figcaption>
+</figure>
+
+
 #### SPades makes both files, but we will be using the `scaffolds.fasta` for this exercise
 
 
