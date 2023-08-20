@@ -9,6 +9,12 @@
     <figcaption>How the structure of our directories should look</figcaption>
 </figure>
 
+#### Command line cheat sheet
+<figure>
+    <img src="command-line-cheat-sheet-large.png" height="800">
+    <figcaption>Variant Calling Workflow</figcaption>
+</figure>
+
 ### 1. Introduction to sequence assembly
 #### What does "sequence assembly" mean?
 #### Assembly is a “catch-all” term used to describe methods where we combine shorter individual reads into longer contiguous sequences called contigs
