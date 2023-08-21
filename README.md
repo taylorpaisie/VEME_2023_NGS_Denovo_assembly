@@ -43,10 +43,45 @@
 #### N50: length for which the collection of all contigs of that length or longer covers at least 50% of assembly length  
 
 
+
+
 <figure>
-    <img src="denovo_pic1.png" width="500" height="400">
+    <img src="denovo_pic1.png" width="500">
     <figcaption>Overlapping reads are assembled into contigs. Based on the info about paired-end reads, contigs may be further assembled into scaffolds</figcaption>
 </figure>
+
+
+#### What is the N50 statistic:  
+* A simpler explanation of N50 starts by ordering contigs by length  
+* Suppose we have 10 different contigs (designated by XXXXXX ) and we ordered these by their decreasing sizes:  
+  
+```
+Contig         Length           Sum
+XXXXXXXXXX       10              10
+XXXXXXXXX         9              19
+XXXXXXXX          8              27
+XXXXXXX           7              34
+XXXXXX            6              40
+XXXXX             5              45
+XXXX              4              49
+XXX               3              52
+XX                2              54
+X                 1              55
+```
+
+* The sum of these lengths starting with the longest is 55. Half of that is 27.5  
+* Go down on this list and add up the lengths to find the contig where the cumulative length exceeds this half value  
+* When we hit contig number 7 we have 10 + 9 + 8 + 7 = 34, this value is larger than 27.5 so it is at this point at least half of the genome is stored in contigs of size 7 or greater - N50 is then 7  
+* “At least half of the nucleotides in this assembly belong to contigs of size 8bp or longer”  
+
+#### Problems with N50 statistic:  
+* One of the biggest problems using the N50 metric as the primary means of evaluating assembly quality is that it rewards “misjoins”   
+* A “misjoin” is the error of concatenating separate contigs into a single segment 
+* Such mistakes can happen when the evidence is insufficient, but the algorithm is tuned to be overly generous in accepting these pieces of evidence  
+* Also applying cutoffs can lead to odd situations when selecting contigs would lead us to be either well under or well over the 50%  
+
+
+
 
 
 #### Multidrug resistant bacteria have become a major public health threat. Phage therapy may to be used as an alternative to antibiotics or, as a supplementary approach to treat some bacterial infections   
