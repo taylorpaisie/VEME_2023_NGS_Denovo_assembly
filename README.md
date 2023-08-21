@@ -5,7 +5,7 @@
 
 #### Directory visualization
 <figure>
-    <img src="denovo_assembly_Graph.svg" width="400" height="300">
+    <img src="denovo_assembly_Graph.svg" width="600">
     <figcaption>How the structure of our directories should look</figcaption>
 </figure>
 
