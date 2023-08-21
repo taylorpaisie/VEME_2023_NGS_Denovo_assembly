@@ -160,8 +160,7 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 
 #### Spades will automatically make the final scaffolds:  
 
-`$ spades.py -k 21,33,55,77,99,127 --careful -1 169_S7_L001_R1_001.trim.fastq.gz \`  
-`-2 169_S7_L001_R2_001.trim.fastq.gz -o spades_output`   
+`$ spades.py -k 21,33,55,77,99,127 --careful -1 169_S7_L001_R1_001.trim.fastq.gz -2 169_S7_L001_R2_001.trim.fastq.gz -o spades_output`   
 
 `ls -l spades_output`  
 
@@ -238,9 +237,7 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 `$ bwa index results/scaffolds/scaffolds.fasta`  
 
 #### Run BWA-MEM reference mapping with the indexed `scaffolds.fasta` as the reference and the original trimmed fastq files as the reads:  
-`$ bwa mem results/scaffolds/scaffolds.fasta \`  
-`data/trimmed_fastq/169_S7_L001_R1_001.trim.fastq.gz \`   
-`data/trimmed_fastq/169_S7_L001_R2_001.trim.fastq.gz > results/sam/169.aligned.sam`    
+`$ bwa mem results/scaffolds/scaffolds.fasta data/trimmed_fastq/169_S7_L001_R1_001.trim.fastq.gz data/trimmed_fastq/169_S7_L001_R2_001.trim.fastq.gz > results/sam/169.aligned.sam`    
 
 
 #### Convert SAM file to BAM format:  
@@ -344,7 +341,7 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 
 
 <figure>
-    <img src="artemis_output.png" width="1000" height="500">
+    <img src="artemis_output.png" width="1000">
     <figcaption>Visualizaing the genome annotation with Artemis</figcaption>
 </figure>
 
