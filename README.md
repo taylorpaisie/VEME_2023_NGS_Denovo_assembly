@@ -209,7 +209,7 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 #### We will know take our scaffolds and use [NCBI BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) to compare our newly assembled genome to other genomes  
 
 <figure>
-    <img src="blast_results.png" width="500" height="400">
+    <img src="blast_results.png" width="1000">
     <figcaption>BLAST results from our scaffolds</figcaption>
 </figure>
 
