@@ -80,11 +80,24 @@ X                 1              55
 * Such mistakes can happen when the evidence is insufficient, but the algorithm is tuned to be overly generous in accepting these pieces of evidence  
 * Also applying cutoffs can lead to odd situations when selecting contigs would lead us to be either well under or well over the 50%  
 
+#### What are k-mers?  
+* A k-mer are all possible subsequences of size k  
+* The rationale for breaking our reads into even smaller pieces, k-mers is that we want to identify “correct” k-mers, those that originate from the real data  
+* The assumption is that whatever errors the reads may have these are distributed randomly - hence will produce different erroneous k-mers  
+* The correct k-mers will always be the most abundant  
+* In general, the longer a k-mer is, the fewer identical k-mers to it exist  
+* At the same time it is also true the longer a k-mer is, the more likely is that it will contain an error  
+* When it comes to assembly processes the rule of reasoning is that:
+  * A larger k value allows resolving more repetitions  
+  * A smaller k increases the chances of seeing a given k-mer  
+* Hence the selection of a k-mer is a tradeoff between longer repeats and more reliable measures  
+* In general, you should assemble sequences using the largest k-mer size possible, such that the k-mer coverage is sufficient  
+* You may estimate these via trial and error (as stated above) but there are also tools that will assist you in determining the most likely k-mer sizes and coverage cutoffs  
 
 
 
-
-#### Multidrug resistant bacteria have become a major public health threat. Phage therapy may to be used as an alternative to antibiotics or, as a supplementary approach to treat some bacterial infections   
+#### Multidrug resistant bacteria have become a major public health threat  
+#### Phage therapy may to be used as an alternative to antibiotics or, as a supplementary approach to treat some bacterial infections   
 #### Bacteriophages have been applied in clinical practice for the treatment of localized infections in wounds, burns, and trophic ulcers, including diabetic foot ulcers (PMC6083058)  
 #### In this study, bacteria were collected from trophic ulcers of the patients  
 #### Bacteriophages that were successful in treating diabetic foot disease were sequenced using NGS technology   
