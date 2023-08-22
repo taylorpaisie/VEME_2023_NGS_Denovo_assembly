@@ -248,7 +248,7 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 `$ bwa index results/scaffolds/scaffolds.fasta`  
 
 #### Run BWA-MEM reference mapping with the indexed `scaffolds.fasta` as the reference and the original trimmed fastq files as the reads:  
-`$ bwa mem results/scaffolds/scaffolds.fasta data/trimmed_fastq/169_S7_L001_R1_001.trim.fastq.gz data/trimmed_fastq/169_S7_L001_R2_001.trim.fastq.gz > results/sam/169.aligned.sam`    
+`$ bwa mem results/scaffolds/scaffolds.fasta trimmed_fastq/169_S7_L001_R1_001.trim.fastq.gz trimmed_fastq/169_S7_L001_R2_001.trim.fastq.gz > results/sam/169.aligned.sam`    
 
 
 #### Convert SAM file to BAM format:  
