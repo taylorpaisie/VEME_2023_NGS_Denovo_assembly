@@ -347,7 +347,7 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 #### It can read EMBL and GENBANK database entries or sequence in FASTA, indexed FASTA or raw format  
 #### Using the GFF file made from PROKKA, we will open it with Artemis:  
 
-`$ /usr/local/share/artemis/art results/annotation/prokka_output/PROKKA_07242023.gff`  
+`$ /usr/local/share/artemis/art results/annotation/prokka_output/PROKKA_08222023.gff`  
 
 
 <figure>
