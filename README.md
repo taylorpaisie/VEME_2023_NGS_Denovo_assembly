@@ -327,7 +327,10 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 #### Running prokka on the improved alignment with our downloaded protein set for annotation:  
 
 `$ mkdir -p results/annotation`  
-`$ mv ~/Downloads/sequences.fasta results/annotation/NC_031063.1.faa`  
+`$ cp /usr/local/share/data/denovo_assembly/results/annotation//NC_031063.1.faa .`  
+
+#### For this tutorial we will copy the protein set we will use for annotation  
+
 
 #### Need to activate the Prokka conda environment (we can talk about this later if we have time):  
 
