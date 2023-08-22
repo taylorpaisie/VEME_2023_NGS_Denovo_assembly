@@ -290,7 +290,7 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 #### We want to "replace all" `_pilon` with nothing
 
 <figure>
-    <img src="editing_fasta.png" width="800" height="700">
+    <img src="editing_fasta.png" width="1000">
     <figcaption>How to edit the improved fasta file</figcaption>
 </figure>
 
