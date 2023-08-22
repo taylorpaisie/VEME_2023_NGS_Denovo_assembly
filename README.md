@@ -24,6 +24,10 @@
 #### The software that performs the assembly is called the assembler  
 #### We will learn how to *de novo* assemble reads sequenced by the Illumina sequencing platform using [SPAdes](http://cab.spbu.ru/software/spades/), an assembly toolkit containing various assembly pipelines
 
+<figure>
+    <img src="denovo_assembly_newspaper.jpeg" weight="1000">
+</figure>
+
 #### *De novo* assembly usually includes the following steps:  
 1. Improving of the reads quality (remove adapters, trim reads, etc..)  
 2. De novo assembly of the overlapping reads into contigs
