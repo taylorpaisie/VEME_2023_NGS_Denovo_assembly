@@ -152,7 +152,12 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 
 #### Move trimmed fastq files to the trimmed fastq directory:  
 `$ mv *trim* ../trimmed_fastq`  
+
+
+
+#### For this tutorial, copy the trimmed fastq files into `trimmed_fastq` directory:  
 `$ cd ../trimmed_fastq`  
+`$ cp /usr/local/share/data/denovo_assembly/data/trimmed_fastq/*.trim.fastq.gz .`   
 
 
 
