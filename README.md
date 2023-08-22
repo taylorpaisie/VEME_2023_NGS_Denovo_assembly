@@ -112,20 +112,19 @@ X                 1              55
 
 #### Making directories for lesson:
 
-`$ mkdir -p denovo_assembly/data/untrimmed_fastq`   
-`$ mkdir -p denovo_assembly/data/trimmed_fastq`   
+`$ mkdir -p denovo_assembly/untrimmed_fastq denovo_assembly/trimmed_fastq`     
 
 
 ### 2. Trimming Fastq files  
 
 #### Copy the fastq and adapter files in the untrimmed fastq directory:  
-`$ cp -i /usr/local/share/data/denovo_assembly/data/untrimmed_fastq/169_S7_L001_R* .`  
-`$ cp -i /usr/local/share/data/denovo_assembly/data/untrimmed_fastq/TruSeq3-PE-2.fa .`  
+`$ cp -i /usr/local/share/data/denovo_assembly/untrimmed_fastq/169_S7_L001_R* .`  
+`$ cp -i /usr/local/share/data/denovo_assembly/untrimmed_fastq/TruSeq3-PE-2.fa .`  
 
 
 #### Running FastQC on the raw fastq files:  
 
-`$ cd denovo_assembly/data/untrimmed_fastq`  
+`$ cd denovo_assembly/untrimmed_fastq`  
 `$ fastqc *.fastq.gz`  
 
 
