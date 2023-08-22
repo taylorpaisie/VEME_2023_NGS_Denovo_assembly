@@ -291,7 +291,7 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 
 <figure>
     <img src="editing_fasta.png" width="1000">
-    <figcaption>How to edit the improved fasta file</figcaption>
+    <figcaption>How to edit the improved fasta file (output from pilon)</figcaption>
 </figure>
 
 
@@ -320,14 +320,14 @@ SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:TruSeq3-PE-2.fa:2:40:15
 #### First we want to download the [protein coding regions of the Pseudomonas phage PEV2 (NC_031063.1) genome](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=Pseudomonas%20phage%20PEV2,%20taxid:1837850), we can do this from NCBI
 
 <figure>
-    <img src="download_proteins.png" width="900" height="500">
+    <img src="download_proteins.png" width="1000">
     <figcaption>How to download a set of proteins from NCBI</figcaption>
 </figure>
 
 #### Running prokka on the improved alignment with our downloaded protein set for annotation:  
 
 `$ mkdir -p results/annotation`  
-`$ cp /usr/local/share/data/denovo_assembly/results/annotation//NC_031063.1.faa .`  
+`$ cp /usr/local/share/data/denovo_assembly/results/annotation//NC_031063.1.faa ~/denovo_assembly/results/annotation`  
 
 #### For this tutorial we will copy the protein set we will use for annotation  
 
