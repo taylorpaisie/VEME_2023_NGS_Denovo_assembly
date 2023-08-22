@@ -1,6 +1,8 @@
 # VEME 2023 NGS *De novo* Assembly Tutorial
 
 ## Taylor K. Paisie
+### CDC - Bacterial Special Pathogens Branch (BSPB)
+### Email:  tpaisie91@gmail.com
 ### `https://taylorpaisie.github.io/VEME_2023_NGS_Denovo_assembly/`
 
 #### Directory visualization
